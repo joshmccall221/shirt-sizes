@@ -3,10 +3,17 @@ import ReactCSSTransition from 'react-addons-css-transition-group';
 
 class Prospectsource extends React.Component {
   render(){
+        var pros = this.props.prospects.map(function(name){
+            return (
+                <div  key={name.id}>
+                {name.author}
+                </div>
+            );
+        });
     return (
-      <ul>
-          {this.props.prospects}
-      </ul>
+        <ul>
+          <li>{pros}</li>
+        </ul>
     )
   }
 }

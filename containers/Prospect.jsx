@@ -1,7 +1,32 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Prospectsource from '../components/Prospectsource.js';
-var test = [' Bobby Joe ',' Billy Joe ',' Jane Joe'];
+
+
+
+
+
+var test = 
+[
+    {
+        "id": 1388534400000,
+        "author": "Bobby Joe",
+        "text": "Hey there!"
+    },
+    {
+        "id": 1420070400000,
+        "author": "Billy Joe",
+        "text": "React is *great*!"
+    },
+    {
+        "id": 3456666,
+        "author": "Jane Joe",
+        "text" : "sup yo?"
+    }
+];
+
+
+
 
 export class Prospect extends React.Component {
   componentDidMount(){
@@ -12,7 +37,6 @@ export class Prospect extends React.Component {
     return  (
       <div>
         <h1>Yoooooooooo I am here!!!!!!!!!!!!!!</h1>
-        <h2>{test}</h2>
         <Prospectsource prospects={test} />
       </div>
     )
